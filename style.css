@@ -1,0 +1,129 @@
+/* Reset and body styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1c1f3a;
+    color: #ffffff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Left section (About Me) */
+.left-section {
+    width: 40%;
+}
+
+.header .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header .role {
+    font-size: 1.2rem;
+    color: #b3b3d4;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.about-me {
+    margin-top: 1rem;
+}
+
+.about-me h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-me p {
+    line-height: 1.6;
+    color: #b3b3d4;
+}
+
+/* Right section (Sun/Moon and Time) */
+.right-section {
+    width: 40%;
+    text-align: right;
+}
+
+.celestial {
+    position: relative;
+    margin: 2rem 0;
+}
+
+#sun-moon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background 1s ease-in-out;
+}
+
+.sun {
+    background: radial-gradient(circle, #ffdd57, #ff9c00);
+    box-shadow: 0 0 20px #ff9c00;
+}
+
+.moon {
+    background: radial-gradient(circle, #ffffff, #b3b3d4);
+    box-shadow: 0 0 20px #b3b3d4;
+}
+
+.portfolio-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5470;
+    margin: 1rem 0;
+}
+
+.time-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Projects section (Scrollable) */
+.projects {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.projects li {
+    margin: 0.5rem 0;
+}
+
+.projects a {
+    color: #ff5470;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.projects a:hover {
+    color: #1c1f3a;
+    background: #ff5470;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}

@@ -1,4 +1,4 @@
-// Get the current time and update the sun/moon and time zones
+// Your existing JavaScript remains the same
 function updateTime() {
     const userTimeElement = document.getElementById("user-time");
     const masonTimeElement = document.getElementById("mason-time");
@@ -8,11 +8,9 @@ function updateTime() {
     const userTime = now.toLocaleString("en-US", { timeZoneName: "short" });
     const masonTime = now.toLocaleString("en-US", { timeZone: "America/Chicago", timeZoneName: "short" });
 
-    // Update user time and Mason time
     userTimeElement.textContent = `Your Time: ${userTime}`;
     masonTimeElement.textContent = `Mason's Time (CST): ${masonTime}`;
 
-    // Update sun or moon based on user's local hour
     const hour = now.getHours();
     if (hour >= 6 && hour < 18) {
         sunMoonElement.classList.add("sun");
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (activities.length > 0) {
                     activities.forEach(activity => {
-                        if (activity.type === 0) { // Custom status
+                        if (activity.type === 0) {
                             statusContent += `<p>💬 ${activity.state}</p>`;
                         }
                     });
@@ -75,7 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-// Update time every second
 setInterval(updateTime, 1000);
 updateTime();
